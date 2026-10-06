@@ -31,6 +31,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.page-body--hobby {
+  background-image: url('../images/bg-mur-tekstur-tegning-som-hobby.png');
+}
+
 .page {
   position: relative;
   display: flex;
@@ -72,6 +76,11 @@ body {
   opacity: 0.36;
 }
 
+.page-body--hobby .site-background__photo {
+  background-image: url('../images/bg-foto-tegning-som-hobby.png');
+  opacity: 0.35;
+}
+
 .site-background__grain {
   background-image: url('../images/grain-texture.png');
   opacity: 0.1;
@@ -80,6 +89,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   mix-blend-mode: multiply;
+}
+
+.page-body--hobby .site-background__grain {
+  background-image: url('../images/grain-texture-page2.png');
 }
 
 .site-header {
@@ -181,6 +194,42 @@ h1 {
   min-height: 0;
 }
 
+.page-content--hobby .info-section {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: min(58.06%, 836px);
+  min-height: 313px;
+  margin: 6rem 0 0 10.83%;
+  padding: 0.5rem 0 0.875rem;
+  border-radius: 20px;
+}
+
+.page-content--hobby .info-section p {
+  width: calc(100% - 5px);
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2rem, 2.64vw, 2.375rem);
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: 0.04em;
+}
+
+.page-content--hobby .cta {
+  margin: auto auto 3rem;
+}
+
+@media (min-width: 761px) {
+  .page-content--hobby {
+    min-height: calc(100svh - 361px + 4rem);
+  }
+
+  .page-content--hobby .cta {
+    margin-bottom: 5rem;
+  }
+}
+
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 325px) minmax(0, 325px);
@@ -259,6 +308,7 @@ h1 {
   line-height: 1.02;
   letter-spacing: 0.05em;
   text-align: center;
+  text-decoration: none;
 }
 
 .cta-placeholder {
@@ -413,6 +463,19 @@ h1 {
     padding: 2.2rem 1.25rem 0;
   }
 
+  .page-content--hobby .info-section {
+    width: calc(100% - 2.5rem);
+    min-height: 0;
+    margin: 2.2rem 1.25rem 0;
+    padding: 0;
+  }
+
+  .page-content--hobby .info-section p {
+    width: 100%;
+    font-size: clamp(2rem, 7.4vw, 2.375rem);
+    line-height: 1.24;
+  }
+
   .intro-section,
   .intro-section--one,
   .intro-section--two,
@@ -443,6 +506,10 @@ h1 {
     border-width: 5px;
     border-radius: 16px;
     font-size: 2rem;
+  }
+
+  .page-content--hobby .cta {
+    margin: 4rem auto 5rem;
   }
 
   .site-footer {
